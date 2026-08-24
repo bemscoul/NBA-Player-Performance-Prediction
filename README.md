@@ -1,14 +1,22 @@
-# NBA-Player-Performance-Prediction
-NBA player season analysis and point per game prediction using Python, Panda and scikit-learn
 # NBA Player Performance Prediction
+
+NBA player-season analysis and points-per-game prediction using Python, Pandas, and scikit-learn.
 
 ## Overview
 
-This project analyzes NBA player season statistics and builds machine learning models to predict a player's points per game using other statistics from the same season.
+This project analyzes NBA player-season statistics and builds machine learning models to predict a player's points per game (PPG) using performance statistics from the same season.
+
+The project includes data cleaning, feature engineering, exploratory data analysis, correlation analysis, predictive modeling, model evaluation, and feature importance analysis.
+
+## Dataset
+
+This project uses the NBA Players Dataset from Kaggle.
+
+Dataset Source: https://www.kaggle.com/datasets/justinas/nba-players-data
 
 The dataset contains more than 12,000 player-season observations and includes variables such as usage percentage, true shooting percentage, assists, rebounds, games played, age, height, and weight.
 
-# Technologies
+## Technologies
 
 - Python
 - Pandas
@@ -16,7 +24,7 @@ The dataset contains more than 12,000 player-season observations and includes va
 - Matplotlib
 - scikit-learn
 
-# Project Workflow
+## Project Workflow
 
 1. Load and inspect the NBA player dataset
 2. Clean and transform the data
@@ -24,37 +32,37 @@ The dataset contains more than 12,000 player-season observations and includes va
 4. Perform exploratory data analysis
 5. Analyze correlations with scoring
 6. Train Linear Regression and Random Forest models
-7. Compare model performance
+7. Evaluate and compare model performance
 8. Analyze feature importance
 
-# Prediction Target
+## Prediction Target
 
-The models predict:
+The models predict a player's **points per game (PPG)** using other player statistics from the same season.
 
-**Points per game for a player during the same season**
+This is a same-season prediction task, not a future-season forecasting model.
 
-This is not a future-season forecasting model.
+## Model Results
 
-# Model Results
-
-# Linear Regression
+### Linear Regression
 
 - RMSE: 1.959
 - R²: 0.895
 
-# Random Forest
+### Random Forest
 
 - RMSE: 1.542
 - R²: 0.935
 
-# Key Finding
+The Random Forest model achieved the stronger predictive performance of the two models.
 
-Usage percentage was the most important predictor of points per game, followed by variables such as rebounds and assists.
+## Key Finding
 
-# Future Improvements
+Usage percentage was the most important predictor of points per game in the Random Forest model, followed by variables including rebounds and assists.
 
-- Store the data in PostgreSQL
-- Query and transform the dataset with SQL
+## Future Improvements
+
+- Store the dataset in PostgreSQL
+- Query and transform the data using SQL
 - Build an automated Python ETL pipeline
 - Add cloud storage and processing with AWS
 - Explore true future-season forecasting
